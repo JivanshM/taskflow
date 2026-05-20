@@ -3,6 +3,8 @@ TaskFlow - Team Task Manager
 
 Live Application URL
 --------------------
+Sorry for the inconvenience. The previous Railway deployment link expired because the Railway trial for that deployment ended, so the application has been redeployed and the updated live URL is listed below.
+
 https://web-production-53a36.up.railway.app/
 
 GitHub Repository
@@ -129,9 +131,9 @@ Deployment files:
 - railway.json
 - requirements.txt
 
-Live deployed app:
-https://web-production-53a36.up.railway.app/
-
 Update Note
 -----------
-Sorry for the inconvenience. The previous Railway deployment link expired because the Railway trial for that deployment ended, so the application has been redeployed and the updated live URL is listed above.
+Sorry for the inconvenience. The previous Railway deployment link expired because the Railway trial for that deployment ended, so the application has been redeployed and the updated live URL is listed below.
+
+Live deployed app:
+https://web-production-53a36.up.railway.app/
