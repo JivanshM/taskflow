@@ -131,36 +131,3 @@ Deployment files:
 
 Live deployed app:
 https://web-production-b8e4a.up.railway.app
-
-Demo Video Guide
-----------------
-Record a 2-5 minute video showing:
-1. Open the live Railway URL.
-2. Sign up with a new user.
-3. Log in.
-4. Create a project.
-5. Create a second user account.
-6. Add the second user as a project member.
-7. Create a task and assign it to the member.
-8. Update task status from To Do to In Progress or Done.
-9. Show the dashboard stats and overdue/status sections.
-10. Briefly explain Admin vs Member permissions.
-
-Submission Details
-------------------
-Live Application URL:
-https://web-production-b8e4a.up.railway.app
-
-GitHub Repository Link:
-https://github.com/JivanshM/taskflow
-
-README file:
-README.txt
-
-Demo Video:
-Record and upload a 2-5 minute explanation video showing the main workflow.
-
-Notes
------
-- The database was tested on the deployed Railway app by creating a user, creating a project, logging in again, and confirming the project persisted.
-- The app is built to satisfy the assignment requirement for a live full-stack project with REST APIs, database relationships, validations, and role-based access control.
