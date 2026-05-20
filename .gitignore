@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+*.db
+*.db-journal
+*.sqlite3
+*.sqlite3-journal
+.env
+.venv/
+write-test.txt
+test2.db
+local.db

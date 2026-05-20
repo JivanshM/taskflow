@@ -1,0 +1,474 @@
+:root {
+    --bg: #f5f5f7;
+    --panel: rgba(255, 255, 255, 0.8);
+    --panel-solid: #ffffff;
+    --muted: #6e6e73;
+    --text: #111111;
+    --line: rgba(17, 17, 17, 0.08);
+    --primary: #0a84ff;
+    --primary-soft: rgba(10, 132, 255, 0.12);
+    --danger: #ff453a;
+    --success: #30d158;
+    --warning: #ff9f0a;
+    --shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+    --radius: 8px;
+    --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: var(--font);
+    background:
+        radial-gradient(circle at top left, rgba(10, 132, 255, 0.14), transparent 28%),
+        radial-gradient(circle at bottom right, rgba(48, 209, 88, 0.08), transparent 20%),
+        var(--bg);
+    color: var(--text);
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+button {
+    border: 0;
+    cursor: pointer;
+}
+
+.shell {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    min-height: 100vh;
+}
+
+.sidebar {
+    padding: 28px 22px;
+    border-right: 1px solid var(--line);
+    background: rgba(255, 255, 255, 0.55);
+    backdrop-filter: blur(20px);
+}
+
+.brand {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 0;
+    margin-bottom: 28px;
+}
+
+.brand span {
+    color: var(--primary);
+}
+
+.nav {
+    display: grid;
+    gap: 10px;
+}
+
+.nav button,
+.ghost {
+    padding: 14px 16px;
+    border-radius: 8px;
+    background: transparent;
+    text-align: left;
+    color: var(--muted);
+}
+
+.nav button.active,
+.nav button:hover,
+.ghost:hover {
+    background: var(--panel-solid);
+    color: var(--text);
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+}
+
+.sidebar-footer {
+    margin-top: 24px;
+    padding-top: 24px;
+    border-top: 1px solid var(--line);
+}
+
+.user-chip {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 14px;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 999px;
+    display: grid;
+    place-items: center;
+    color: #fff;
+    font-weight: 700;
+}
+
+.main {
+    padding: 32px;
+}
+
+.mobile-nav {
+    display: none;
+}
+
+.panel,
+.auth-card,
+.stat,
+.task-card,
+.project-card,
+.member-card {
+    background: var(--panel);
+    backdrop-filter: blur(18px);
+    border: 1px solid rgba(255, 255, 255, 0.55);
+    box-shadow: var(--shadow);
+}
+
+.panel,
+.auth-card,
+.project-card,
+.task-card,
+.member-card,
+.stat {
+    border-radius: var(--radius);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: flex-start;
+    margin-bottom: 24px;
+}
+
+.title {
+    font-size: 38px;
+    line-height: 1;
+    letter-spacing: 0;
+    margin: 0 0 8px;
+}
+
+.subtitle,
+.helper,
+.meta {
+    color: var(--muted);
+}
+
+.subtitle {
+    margin: 0;
+}
+
+.btn {
+    padding: 12px 18px;
+    border-radius: 999px;
+    background: var(--primary);
+    color: #fff;
+    box-shadow: 0 10px 24px rgba(10, 132, 255, 0.25);
+    white-space: nowrap;
+}
+
+.btn.secondary {
+    background: var(--panel-solid);
+    color: var(--text);
+    box-shadow: none;
+    border: 1px solid var(--line);
+}
+
+.btn.danger {
+    background: var(--danger);
+}
+
+.grid-4,
+.grid-2,
+.project-grid,
+.task-columns {
+    display: grid;
+    gap: 18px;
+}
+
+.grid-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.grid-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.project-grid {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.task-columns {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    align-items: start;
+}
+
+.stat,
+.panel {
+    padding: 22px;
+}
+
+.stat-label,
+label,
+.chip {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0;
+    color: var(--muted);
+}
+
+.stat-value {
+    font-size: 34px;
+    font-weight: 700;
+    letter-spacing: 0;
+    margin-top: 8px;
+}
+
+.stack {
+    display: grid;
+    gap: 16px;
+}
+
+.project-card,
+.task-card,
+.member-card {
+    padding: 18px;
+}
+
+.project-card h3,
+.task-card h4,
+.member-card h4 {
+    margin: 0;
+    letter-spacing: 0;
+}
+
+.row {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.spread {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    align-items: center;
+}
+
+.chip {
+    background: var(--panel-solid);
+    border: 1px solid var(--line);
+    padding: 7px 10px;
+    border-radius: 999px;
+}
+
+.badge {
+    padding: 6px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+    background: var(--primary-soft);
+    color: var(--primary);
+}
+
+.badge.done {
+    background: rgba(48, 209, 88, 0.14);
+    color: var(--success);
+}
+
+.badge.overdue,
+.badge.urgent,
+.badge.high {
+    background: rgba(255, 69, 58, 0.14);
+    color: var(--danger);
+}
+
+.badge.review {
+    background: rgba(255, 159, 10, 0.14);
+    color: var(--warning);
+}
+
+.column {
+    padding: 16px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.42);
+    border: 1px solid rgba(255, 255, 255, 0.55);
+    min-height: 260px;
+}
+
+.column h3 {
+    margin-top: 0;
+}
+
+form {
+    display: grid;
+    gap: 14px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid var(--line);
+    padding: 13px 15px;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.split {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.auth-wrap {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 24px;
+    background:
+        linear-gradient(145deg, rgba(255, 255, 255, 0.68), rgba(245, 245, 247, 0.52)),
+        var(--bg);
+}
+
+.auth-card {
+    width: min(430px, 100%);
+    padding: 28px;
+    display: grid;
+    gap: 18px;
+}
+
+.auth-mark {
+    width: 44px;
+    height: 44px;
+    display: grid;
+    place-items: center;
+    border-radius: 8px;
+    background: #111111;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.auth-title {
+    font-size: 32px;
+    margin: 0;
+    letter-spacing: 0;
+}
+
+.toggle {
+    display: flex;
+    gap: 8px;
+    padding: 6px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid var(--line);
+}
+
+.toggle button {
+    flex: 1;
+    padding: 10px 14px;
+    border-radius: 6px;
+    background: transparent;
+}
+
+.toggle button.active {
+    background: var(--panel-solid);
+    box-shadow: 0 8px 18px rgba(15, 23, 42, 0.06);
+}
+
+.message {
+    padding: 12px 14px;
+    border-radius: 8px;
+    background: rgba(255, 69, 58, 0.1);
+    color: var(--danger);
+}
+
+.auth-foot {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    padding-top: 4px;
+}
+
+.auth-foot span {
+    padding: 7px 9px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    color: var(--muted);
+    background: rgba(255, 255, 255, 0.72);
+    font-size: 12px;
+}
+
+.project-dot {
+    width: 24px;
+    height: 24px;
+    font-size: 0;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(10, 132, 255, 0.14);
+    outline: none;
+}
+
+@media (max-width: 1100px) {
+    .shell,
+    .grid-2,
+    .task-columns,
+    .grid-4 {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .main {
+        padding: 22px;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .header .btn {
+        align-self: flex-start;
+    }
+
+    .mobile-nav {
+        display: flex;
+        gap: 8px;
+        margin-bottom: 22px;
+        overflow-x: auto;
+    }
+
+    .mobile-nav button {
+        padding: 10px 12px;
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.72);
+        border: 1px solid var(--line);
+        color: var(--muted);
+        white-space: nowrap;
+    }
+
+    .mobile-nav button.active {
+        background: #111111;
+        color: #ffffff;
+    }
+}
